@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <div className='container mx-auto items-center text-white text-center px-6 bg-[#244d3f]'>
             <div className='pt-16'>
-                <Image className='mx-auto' src={logo} alt="KeenKeeper Logo" width={250} height={100} />
+                <Image className='mx-auto' src={logo} alt="KeenKeeper Logo" width={250} height='auto' />
                 <p className='mt-2'>Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.</p>
             </div>
 

@@ -16,20 +16,20 @@ const Navbar = () => {
                     <Link href="/" className="text-2xl font-bold">KeenKeeper</Link>
                 </div>
 
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-4">
                     <ActiveLink href="/">
                         <RiHome2Line className="text-xl" />
-                        <span>Home</span>
+                        <span className='text-[18px]'>Home</span>
                     </ActiveLink>
 
                     <ActiveLink href="/timeline">
                         <IoTimeOutline className="text-xl" />
-                        <span>Timeline</span>
+                        <span className='text-[18px]'>Timeline</span>
                     </ActiveLink>
 
                     <ActiveLink href="/stats">
                         <PiChartLine className="text-xl" />
-                        <span>Stats</span>
+                        <span className='text-[18px]'>Stats</span>
                     </ActiveLink>
                 </div>
             </nav>

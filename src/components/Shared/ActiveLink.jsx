@@ -9,7 +9,7 @@ const ActiveLink = ({href, children}) => {
     
     const isActive = pathname === href;
     return (
-        <Link href={href} className={`btn flex items-center gap-2 transition-all ${isActive? 'btn-success' : 'btn-ghost' }`}>
+        <Link href={href} className={`btn flex items-center gap-2 transition-all ${isActive? 'bg-[#244d3f] text-white font-bold' : 'btn-ghost' }`}>
             {children}
         </Link>
     );

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "David Kim",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "david.kim@example.com",
+    "days_since_contact": 62,
+    "status": "Almost due",
+    "tags": ["WORK"],
+    "bio": "Senior developer at TechFlow. We often discuss system design and next-gen tech.",
+    "goal": 65,
+    "next_due_date": "2026-04-17"
+  },
+  {
+    "id": 2,
+    "name": "Emma Wilson",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "emma.wilson@outlook.com",
+    "days_since_contact": 62,
+    "status": "Overdue",
+    "tags": ["FAMILY"],
+    "bio": "Cousin from Chicago. Loves baking and hosting family dinners on weekends.",
+    "goal": 30,
+    "next_due_date": "2026-03-14"
+  },
+  {
+    "id": 3,
+    "name": "Lisa Nakamura",
+    "picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "email": "lisa.naka@gmail.com",
+    "days_since_contact": 62,
+    "status": "On-track",
+    "tags": ["WORK"],
+    "bio": "Creative director. Met during the 2024 Design Summit. Expert in UI/UX.",
+    "goal": 90,
+    "next_due_date": "2026-05-12"
+  },
+  {
+    "id": 4,
+    "name": "James Wright",
+    "picture": "https://randomuser.me/api/portraits/men/85.jpg",
+    "email": "j.wright@traveler.com",
+    "days_since_contact": 62,
+    "status": "Overdue",
+    "tags": ["HOBBY", "TRAVEL"],
+    "bio": "Backpacking buddy. We explored Southeast Asia together last summer.",
+    "goal": 45,
+    "next_due_date": "2026-03-29"
+  },
+  {
+    "id": 5,
+    "name": "Sarah Chen",
+    "picture": "https://randomuser.me/api/portraits/women/22.jpg",
+    "email": "sarah.chen@startup.io",
+    "days_since_contact": 10,
+    "status": "On-track",
+    "tags": ["COLLEGE", "WORK"],
+    "bio": "University lab partner. Now working in AI research. Brilliant problem solver.",
+    "goal": 30,
+    "next_due_date": "2026-05-04"
+  },
+  {
+    "id": 6,
+    "name": "Michael Ross",
+    "picture": "https://randomuser.me/api/portraits/men/12.jpg",
+    "email": "m.ross@legal.com",
+    "days_since_contact": 28,
+    "status": "Almost due",
+    "tags": ["HOBBY"],
+    "bio": "Tennis partner. We play every Sunday morning at the local club.",
+    "goal": 30,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 7,
+    "name": "Sophia Martinez",
+    "picture": "https://randomuser.me/api/portraits/women/33.jpg",
+    "email": "sophia.m@artgallery.com",
+    "days_since_contact": 15,
+    "status": "On-track",
+    "tags": ["TRAVEL"],
+    "bio": "Met in Madrid during an art tour. Shares a passion for oil painting.",
+    "goal": 60,
+    "next_due_date": "2026-05-29"
+  },
+  {
+    "id": 8,
+    "name": "Ryan Thompson",
+    "picture": "https://randomuser.me/api/portraits/men/52.jpg",
+    "email": "ryan.t@fitness.com",
+    "days_since_contact": 45,
+    "status": "Overdue",
+    "tags": ["HOBBY"],
+    "bio": "Gym coach and long-time friend. Helped me run my first marathon.",
+    "goal": 15,
+    "next_due_date": "2026-03-15"
+  },
+  {
+    "id": 9,
+    "name": "Olivia Brown",
+    "picture": "https://randomuser.me/api/portraits/women/17.jpg",
+    "email": "olivia.b@music.com",
+    "days_since_contact": 5,
+    "status": "On-track",
+    "tags": ["FAMILY"],
+    "bio": "Younger sister. Studying music production. Always sends the best playlists.",
+    "goal": 7,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 10,
+    "name": "Daniel Foster",
+    "picture": "https://randomuser.me/api/portraits/men/60.jpg",
+    "email": "dfoster@architect.com",
+    "days_since_contact": 18,
+    "status": "Almost due",
+    "tags": ["WORK", "COLLEGE"],
+    "bio": "Architecture school classmate. Working on sustainable urban housing projects.",
+    "goal": 20,
+    "next_due_date": "2026-04-16"
+  }
+]
