@@ -2,12 +2,22 @@
 @plugin "daisyui";
 
 
-/* .custom-card {
+.boundary {
+  border: 3px solid tomato;
+  border-radius: 20px;
+}
+
+
+.custom-card {
   background-color: #ffffff;
-  border-radius: 0.5rem;
+  /* border-radius: 15px; */
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
-  flex: 1 1 0%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-} */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+}

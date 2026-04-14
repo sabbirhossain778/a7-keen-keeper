@@ -1,5 +1,10 @@
 import React from 'react';
 import friendsData from "../../../../public/friends.json";
+import Image from 'next/image';
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { BsArchive } from "react-icons/bs";
+import { RiNotificationSnoozeLine } from "react-icons/ri";
+import SectionTwo from '@/components/SectionTwo';
 
 // const friendsPromise = async function () {
 //     const res = await fetch("/friends.json");
@@ -7,22 +12,64 @@ import friendsData from "../../../../public/friends.json";
 //     return friends;
 // }
 
-const FriendsDetailPage = async({params}) => {
-    const {id} = await params;
-    console.log('Friend ID:', id);
-    
-    const friend = friendsData.find(frd =>frd.id === parseInt(id));
-    console.log('Friend Details:', friend);
-    // console.log(friendsData);
-    
+const FriendsDetailPage = async ({ params }) => {
+    const { id } = await params;
+    // console.log('Friend ID:', id);
+
+    const friend = friendsData.find(frd => frd.id === parseInt(id));
+    const { name, days_since_contact, tags, status, picture, bio, email } = friend;
+    // console.log('Friend Details:', friend);
+    const statusColors = {
+        "overdue": "bg-red-500",
+        "almost due": "bg-orange-400",
+        "on-track": "bg-green-600",
+    };
+
 
     // const friends = friendsPromise();
     // console.log(friends);
-    
+
     return (
-        <div className='flex flex-col items-center justify-center pt-10'>
-            <h4 className='text-3xl font-bold'>Friend Details {id}</h4>
-            <h3 className='text-3xl font-bold'>Friend name:{}</h3>
+        <div className='py-20 space-y-10 bg-base-200 w-full'>
+            <div className='w-10/12 mx-auto flex justify-between gap-8'>
+                <div className='w-88 space-y-4'>
+                    <div className="card bg-base-100 shadow-sm">
+                        <figure className="px-10 pt-10">
+                            <Image
+                                src={picture}
+                                alt={name} width={80} height={80}
+                                className="rounded-full" />
+                        </figure>
+                        <div className="card-body pt-2 items-center text-center">
+                            <h2 className="card-title text-xl">{name}</h2>
+                            <p>{days_since_contact}d ago</p>
+                            <p className='bg-green-200 text-green-800 px-2 py-1 rounded-full text-sm font-medium'>{tags}</p>
+
+                            <p className={`${statusColors[status.toLowerCase()]} px-2 py-1 rounded-full text-sm text-white`}>{status}</p>
+                            <p className='font-medium text-[#64748b] italic'>{bio}</p>
+                            <p className='font-medium text-[#64748b]'>{email}</p>
+                        </div>
+
+                    </div>
+
+                    <div className="custom-card">
+                        <RiNotificationSnoozeLine />
+                        <span className='text-[18px] font-medium'>Snooze 2 weeks</span>
+                    </div>
+                    <div className="custom-card">
+                        <BsArchive />
+                        <span className='text-[18px] font-medium'>Archive</span>
+                    </div>
+                    <div className="custom-card">
+                        <RiDeleteBin6Line className="text-red-500" />
+                        <span className='text-[18px] font-medium'>Delete</span>
+                    </div>
+                </div>
+
+                <div className='flex-1'>
+                   <SectionTwo friend={friend} />
+                </div>
+            </div>
         </div>
     );
 };
