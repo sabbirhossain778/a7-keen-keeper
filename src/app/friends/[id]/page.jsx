@@ -5,29 +5,21 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BsArchive } from "react-icons/bs";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import SectionTwo from '@/components/SectionTwo';
+import Link from 'next/link';
 
-// const friendsPromise = async function () {
-//     const res = await fetch("/friends.json");
-//     const friends = await res.json();
-//     return friends;
-// }
 
 const FriendsDetailPage = async ({ params }) => {
     const { id } = await params;
-    // console.log('Friend ID:', id);
 
     const friend = friendsData.find(frd => frd.id === parseInt(id));
+
     const { name, days_since_contact, tags, status, picture, bio, email } = friend;
-    // console.log('Friend Details:', friend);
+ 
     const statusColors = {
         "overdue": "bg-red-500",
         "almost due": "bg-orange-400",
         "on-track": "bg-green-600",
     };
-
-
-    // const friends = friendsPromise();
-    // console.log(friends);
 
     return (
         <div className='py-20 space-y-10 bg-base-200 w-full'>
@@ -60,10 +52,10 @@ const FriendsDetailPage = async ({ params }) => {
                         <BsArchive />
                         <span className='text-[18px] font-medium'>Archive</span>
                     </div>
-                    <div className="custom-card">
+                    <Link href='/' className="custom-card">
                         <RiDeleteBin6Line className="text-red-500" />
                         <span className='text-[18px] font-medium'>Delete</span>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className='flex-1'>

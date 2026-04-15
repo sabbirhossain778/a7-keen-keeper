@@ -4,7 +4,7 @@ import { RiHome2Line } from "react-icons/ri";
 import { IoTimeOutline } from "react-icons/io5";
 import { PiChartLine } from "react-icons/pi";
 import ActiveLink from './ActiveLink';
-
+import { ContactProvider } from '@/context/ContactContext';
 
 
 const Navbar = () => {

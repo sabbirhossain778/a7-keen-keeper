@@ -1,6 +1,6 @@
 import React from 'react';
 export const metadata = {
-    title: "Stats | Create Next App"
+    title: "Stats | Keen Keeper",
 };
 
 const StatsPage = () => {

@@ -1,12 +1,17 @@
 import { AiOutlinePlus } from "react-icons/ai";
 import FriendsPage from "./friends/page";
-export const metadata = {
-  title: "Home | Create Next App"
-};
+import { Suspense } from "react";
+// import Friends2 from '../../public/friends.json';
 
 
 
-export default function Home() {
+
+const Home = async () => {
+  // const navigation = useNavigation();
+    // console.log('home',Friends2);
+
+  const res = await fetch('http://localhost:3000/friends.json');
+  const friends = await res.json();
 
   return (
     <div className=" py-20 space-y-10 bg-base-200">
@@ -37,8 +42,14 @@ export default function Home() {
       </div>
 
       <div className="w-10/12 mx-auto">
-        <FriendsPage></FriendsPage>
+        <Suspense fallback={<div className="flex h-64 justify-center items-center w-full">
+          <span className="loading loading-infinity w-20 text-primary"></span>
+        </div>}>
+          <FriendsPage friends={friends}></FriendsPage>
+        </Suspense>
       </div>
     </div>
   );
 }
+
+export default Home;

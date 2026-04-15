@@ -4,9 +4,23 @@ import { toast } from 'react-toastify';
 import { MdOutlineWifiCalling3 } from "react-icons/md";
 import { BsChatLeftText } from "react-icons/bs";
 import { VscDeviceCameraVideo } from "react-icons/vsc";
+import { useContact } from '@/context/ContactContext';
+
 
 const ContactActions = ({ friend }) => {
+    const { setSelectedContacts } = useContact();
     const handleClick = (action) => {
+        const newEntry = {
+            ...friend,
+            actionType: action,
+            date: new Date().toLocaleDateString('en-US', {
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            })
+        };
+
+        setSelectedContacts((prev) => [newEntry, ...prev]);
         if (action === 'call') {
             toast.success(`Calling ${friend.name}...`);
         }
