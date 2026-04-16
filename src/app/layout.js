@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <ContactProvider>
           <Navbar></Navbar>
-          <main className="flex-1 container mx-auto">
+          <main className="flex-1 bg-base-200 ">
             {children}
             <ToastContainer position="top-right" autoClose={1500} />
           </main>

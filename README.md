@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Keen Keeper 
 
-## Getting Started
+Keen Keeper is your personal relationship manager designed to help you nurture and maintain meaningful connections with the people who matter most. In a busy world, it’s easy to lose track of when you last reached out; Keen Keeper ensures your friendships never fade.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I built this project using a modern tech stack to ensure performance, scalability, and a great developer experience:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Frontend:** Next.js (App Router)
+- **Styling:** Tailwind CSS & DaisyUI
+- **Icons:** React Icons
+- **Charts:** Recharts (for Friendship Analytics)
+- **State Management:** React Context API
+- **Notifications:** React Toastify
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Dynamic Activity Logging
+Allows users to log interactions (Calls, Texts, Video calls) instantly. Using React Context API, the data is shared across the app, ensuring that the dashboard and timeline stay updated in real-time.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Live Interaction Analytics
+Features a visual breakdown of communication methods using Recharts. It automatically calculates and displays the ratio of different interaction types, helping users understand their social habits at a glance.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Filterable Interaction Timeline
+A centralized history log where every interaction is recorded with dates and details. The built-in filtering system allows users to sort their history by interaction type (Call/Text/Video) for better tracking.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/sabbirhossain778/a7-keen-keeper](https://github.com/sabbirhossain778/a7-keen-keeper)

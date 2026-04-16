@@ -17,7 +17,7 @@ const TimelinePage = () => {
   });
 
   return (
-    <div className='bg-base-200 min-h-[60vh] md:min-h-[80vh]'>
+    <div className='container mx-auto min-h-[60vh] md:min-h-[80vh]'>
       <div className="w-11/12 md:w-10/12 mx-auto py-6 md:py-14 space-y-4 md:space-y-6">
         <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Timeline</h2>
 

@@ -10,7 +10,7 @@ const Home = async () => {
   const friends = await res.json();
 
   return (
-    <div className="py-8 md:py-20 space-y-8 bg-base-200">
+    <div className="py-8 md:py-20 space-y-8 container mx-auto">
       <div className="w-11/12 md:w-10/12 mx-auto justify-center text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Friends to keep close in your life</h2>
         <p className="text-[#64748b]">Your personal shelf of meaningful connections. Browse, tend, and nurture the <br></br>relationships that matter most.</p>
