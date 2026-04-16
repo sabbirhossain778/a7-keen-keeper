@@ -6,7 +6,9 @@ import { Suspense } from "react";
 
 const Home = async () => {
 
-  const res = await fetch('http://localhost:3000/friends.json');
+  const res = await fetch('http://localhost:3000/friends.json', {
+    cache: 'no-store'
+  });
   const friends = await res.json();
 
   return (
