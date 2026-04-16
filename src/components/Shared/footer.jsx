@@ -4,7 +4,7 @@ import instagram from '../../../public/assets/instagram.png';
 import facebook from '../../../public/assets/facebook.png';
 import twitter from '../../../public/assets/twitter.png';
 import logo from '../../../public/assets/logo-xl.png';
-
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -27,9 +27,23 @@ const Footer = () => {
                 <div className='mt-8 flex flex-col items-center'>
                     <h4 className='font-medium'>Social Links</h4>
                     <div className='flex gap-6 mt-4'>
-                        <Image src={instagram} className="hover:opacity-80 cursor-pointer" alt="Instagram" width={28} height={28} />
-                        <Image src={facebook} className="hover:opacity-80 cursor-pointer" alt="Facebook" width={28} height={28} />
-                        <Image src={twitter} className="hover:opacity-80 cursor-pointer" alt="Twitter" width={28} height={28} />
+
+                        <a href="https://www.linkedin.com/in/md-sabbir-hossain-dev"
+                            target="_blank" rel="noopener noreferrer" title="Connect with me on LinkedIn" >
+                            <FaLinkedin className="text-[28px] hover:opacity-80 cursor-pointer transition-opacity rounded-full" />
+                        </a>
+
+                        <a href="https://www.facebook.com/share/14ZXerZM1bz/"
+                            target="_blank" rel="noopener noreferrer"
+                            title="Connect with me on FB" >
+                            <Image src={facebook} className="hover:opacity-80 cursor-pointer" alt="Facebook" width={28} height={28} />
+                        </a>
+
+                        <a href="https://x.com/shb09931"
+                            target="_blank" rel="noopener noreferrer"
+                            title="Connect with me on Twitter" >
+                            <Image src={twitter} className="hover:opacity-80 cursor-pointer" alt="Twitter" width={28} height={28} />
+                        </a>
                     </div>
                 </div>
 
