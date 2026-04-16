@@ -22,9 +22,9 @@ const FriendsDetailPage = async ({ params }) => {
     };
 
     return (
-        <div className='py-20 space-y-10 bg-base-200 w-full'>
-            <div className='w-10/12 mx-auto flex justify-between gap-8'>
-                <div className='w-88 space-y-4'>
+        <div className='py-8 md:py-20 space-y-10 bg-base-200 w-full'>
+            <div className='w-11/12 md:w-10/12 mx-auto md:flex justify-between gap-8'>
+                <div className='w-88 space-y-4 mx-auto'>
                     <div className="card bg-base-100 shadow-sm">
                         <figure className="px-10 pt-10">
                             <Image

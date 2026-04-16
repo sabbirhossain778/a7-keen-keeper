@@ -26,12 +26,12 @@ const ContactActions = ({ friend }) => {
     };
 
     return (
-        <div className='space-y-6'>
+        <div className='space-y-4 md:space-y-6'>
 
             {/* Quick Check-In Buttons */}
-            <div className="card bg-base-100 w-full shadow-sm p-6">
+            <div className="card bg-base-100 w-full shadow-sm p-4 md:p-6">
                 <h2 className="text-xl font-medium mb-4">Quick Check-In</h2>
-                <div className='flex justify-between gap-6'>
+                <div className='flex justify-between gap-3 md:gap-6'>
                     <button onClick={() => handleClick('call')} className='flex-1 active:scale-95'>
                         <div className="card bg-base-200 p-4 items-center gap-2 hover:bg-base-300 transition-all">
                             <MdOutlineWifiCalling3 size={24} />
@@ -56,7 +56,7 @@ const ContactActions = ({ friend }) => {
             </div>
 
             {/* Recent Interactions List */}
-            <div className="card bg-base-100 w-full shadow-sm  p-6">
+            <div className="card bg-base-100 w-full shadow-sm p-4 md:p-6">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-xl font-medium">Recent Interactions</h2>
                     <button className='btn btn-ghost btn-sm'><MdOutlineHistory size={20} />Full History</button>

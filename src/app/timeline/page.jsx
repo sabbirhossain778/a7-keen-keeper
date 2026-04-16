@@ -17,9 +17,9 @@ const TimelinePage = () => {
   });
 
   return (
-    <div className='bg-base-200 min-h-screen'>
-      <div className="w-10/12 mx-auto py-14 space-y-6">
-        <h2 className='text-5xl font-bold'>Timeline</h2>
+    <div className='bg-base-200 min-h-[60vh] md:min-h-[80vh]'>
+      <div className="w-11/12 md:w-10/12 mx-auto py-6 md:py-14 space-y-4 md:space-y-6">
+        <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold'>Timeline</h2>
 
       {/* DaisyUI Search Bar */}
         <div className="w-full max-w-xs">
@@ -56,7 +56,7 @@ const TimelinePage = () => {
 
               {/* details */}
                 <div className="flex-1">
-                  <p className="card-title text-[20px] font-medium capitalize">
+                  <p className="card-title text-[18px] md:text-[20px] font-medium capitalize">
                     {contact.actionType} <span className="font-normal text-gray-500">with {contact.name}</span>
                   </p>
                   <p className="text-gray-500 text-sm">{contact.date}</p>
