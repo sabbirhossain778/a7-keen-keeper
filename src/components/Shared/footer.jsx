@@ -16,7 +16,7 @@ const Footer = () => {
                     <Image
                         className='mx-auto' src={logo}
                         alt="KeenKeeper Logo" width={200}
-                        height={50} style={{ height: 'auto' }}
+                        height={50} style={{ height: 'auto', width: 'auto' }}
                     />
                     <p className='mt-4 max-w-lg mx-auto text-sm md:text-base opacity-90'>
                         Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
