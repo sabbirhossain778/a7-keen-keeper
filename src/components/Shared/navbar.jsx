@@ -5,6 +5,8 @@ import { IoTimeOutline } from "react-icons/io5";
 import { PiChartLine } from "react-icons/pi";
 import ActiveLink from './ActiveLink';
 import { ContactProvider } from '@/context/ContactContext';
+import Image from 'next/image';
+import NavIcon from '../../../public/assets/logo.png'
 
 
 const Navbar = () => {
@@ -13,7 +15,9 @@ const Navbar = () => {
             <nav className="container mx-auto  flex items-center justify-between  px-4 py-4">
 
                 <div>
-                    <Link href="/" className="text-2xl font-bold">KeenKeeper</Link>
+                    <Link href="/" className="text-2xl font-bold">
+                    <Image src={NavIcon} alt='Nav-Icon' />
+                    </Link>
                 </div>
 
                 <div className="flex items-center gap-4">

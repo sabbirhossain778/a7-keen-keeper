@@ -1,14 +1,15 @@
 'use client';
 import React from 'react';
 import { toast } from 'react-toastify';
-import { MdOutlineWifiCalling3 } from "react-icons/md";
+import { useContact } from '@/context/ContactContext';
+import { MdOutlineWifiCalling3, MdOutlineHistory } from "react-icons/md";
 import { BsChatLeftText } from "react-icons/bs";
 import { VscDeviceCameraVideo } from "react-icons/vsc";
-import { useContact } from '@/context/ContactContext';
-
 
 const ContactActions = ({ friend }) => {
-    const { setSelectedContacts } = useContact();
+    const { selectedContacts, setSelectedContacts } = useContact();
+    const personalHistory = selectedContacts.filter(item => item.id === friend.id);
+
     const handleClick = (action) => {
         const newEntry = {
             ...friend,
@@ -21,45 +22,70 @@ const ContactActions = ({ friend }) => {
         };
 
         setSelectedContacts((prev) => [newEntry, ...prev]);
-        if (action === 'call') {
-            toast.success(`Calling ${friend.name}...`);
-        }
-        else if (action === 'text') {
-            toast.success(`Texting ${friend.name}...`);
-        }
-        else if (action === 'video') {
-            toast.success(`Video calling ${friend.name}...`);
-        }
+        toast.success(`${action} with ${friend.name}...`);
     };
 
     return (
-        <div className='flex flex-3 justify-between gap-6'>
-            <button onClick={() => handleClick('call')} className='flex-1 active:scale-95'>
-                <div className="card bg-base-200 shadow-sm">
-                    <div className="card-body text-center items-center">
-                        <h2 className="card-title"><MdOutlineWifiCalling3 size={20} /></h2>
-                        <p className='text-[#64748b] text-[18px]'>Call</p>
-                    </div>
-                </div>
-            </button>
+        <div className='space-y-6'>
 
-            <button onClick={() => handleClick('text')} className='flex-1 active:scale-95'>
-                <div className="card bg-base-200 flex-1 shadow-sm">
-                    <div className="card-body text-center items-center">
-                        <h2 className="card-title"><BsChatLeftText size={20} /></h2>
-                        <p className='text-[#64748b] text-[18px]'>Text</p>
-                    </div>
-                </div>
-            </button>
+            {/* Quick Check-In Buttons */}
+            <div className="card bg-base-100 w-full shadow-sm p-6">
+                <h2 className="text-xl font-medium mb-4">Quick Check-In</h2>
+                <div className='flex justify-between gap-6'>
+                    <button onClick={() => handleClick('call')} className='flex-1 active:scale-95'>
+                        <div className="card bg-base-200 p-4 items-center gap-2 hover:bg-base-300 transition-all">
+                            <MdOutlineWifiCalling3 size={24} />
+                            <span className='font-medium'>Call</span>
+                        </div>
+                    </button>
 
-            <button onClick={() => handleClick('video')} className='flex-1 active:scale-95'>
-                <div className="card bg-base-200 flex-1 shadow-sm">
-                    <div className="card-body text-center items-center">
-                        <h2 className="card-title"><VscDeviceCameraVideo size={25} /></h2>
-                        <p className='text-[#64748b] text-[18px]'>Video</p>
-                    </div>
+                    <button onClick={() => handleClick('text')} className='flex-1 active:scale-95'>
+                        <div className="card bg-base-200 p-4 items-center gap-2 hover:bg-base-300 transition-all">
+                            <BsChatLeftText size={22} />
+                            <span className='font-medium'>Text</span>
+                        </div>
+                    </button>
+
+                    <button onClick={() => handleClick('video')} className='flex-1 active:scale-95'>
+                        <div className="card bg-base-200 p-4 items-center gap-2 hover:bg-base-300 transition-all">
+                            <VscDeviceCameraVideo size={24} />
+                            <span className='font-medium'>Video</span>
+                        </div>
+                    </button>
                 </div>
-            </button>
+            </div>
+
+            {/* Recent Interactions List */}
+            <div className="card bg-base-100 w-full shadow-sm  p-6">
+                <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-xl font-medium">Recent Interactions</h2>
+                    <button className='btn btn-ghost btn-sm'><MdOutlineHistory size={20} />Full History</button>
+                </div>
+
+                {/* Recent Interactions History */}
+                <div className="space-y-3">
+                    {personalHistory.length > 0 ? (
+                        personalHistory.map((item, index) => (
+                            <div key={index} className="flex items-center justify-between p-4  rounded-xl bg-white shadow-sm">
+                                <div className="flex items-center gap-4">
+                                    <div className="text-gray-500">
+                                        {item.actionType === 'call' && <MdOutlineWifiCalling3 size={22} />}
+                                        {item.actionType === 'text' && <BsChatLeftText size={20} />}
+                                        {item.actionType === 'video' && <VscDeviceCameraVideo size={22} />}
+                                    </div>
+                                    <div>
+                                        <p className="font-bold capitalize">{item.actionType}</p>
+                                        <p className=" text-gray-500">Asked for career advice</p>
+                                    </div>
+                                </div>
+                                <p className="font-medium text-gray-500">{item.date}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p className="text-center text-gray-400 py-6 italic">No recent interactions recorded.</p>
+                    )}
+                </div>
+            </div>
         </div>
     );
 };

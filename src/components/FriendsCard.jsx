@@ -7,7 +7,7 @@ const FriendsCard = ({ friend }) => {
 
     const statusColors = {
     "overdue": "bg-red-500",
-    "almost due": "bg-orange-400",
+    "almost due": "bg-yellow-500",
     "on-track": "bg-green-600",
   };
 

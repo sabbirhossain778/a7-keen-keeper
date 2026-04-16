@@ -8,7 +8,7 @@ import { Suspense } from "react";
 
 const Home = async () => {
   // const navigation = useNavigation();
-    // console.log('home',Friends2);
+  // console.log('home',Friends2);
 
   const res = await fetch('http://localhost:3000/friends.json');
   const friends = await res.json();
