@@ -7,7 +7,7 @@
 ---
 
 ## 📸 Preview
-![Keen Keeper Screenshot](...) 
+![Keen Keeper Screenshot](./Screenshot%202026-04-28%20at%2012.56.14%20AM.png)
 
 ---
 
